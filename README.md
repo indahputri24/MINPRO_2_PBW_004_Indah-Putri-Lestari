@@ -6,8 +6,6 @@ NIM: 2409116004
 
 Kelas: A
 
-# Penjelasan
-
 ## Section Hero
 
 <img width="3200" height="2000" alt="image" src="https://github.com/user-attachments/assets/e7272068-4e7b-4cf4-9b76-f89f945d0022" />
