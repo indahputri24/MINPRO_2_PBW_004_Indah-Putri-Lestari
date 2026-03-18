@@ -27,9 +27,7 @@ Data kemudian ditampilkan menggunakan PHP:
 <h4><?= $data['nim']; ?></h4>
 ```
 
-# SECTION ABOUT ME
-
-## Section About Me
+# Section About Me
 
 <img width="3200" height="2000" alt="image" src="https://github.com/user-attachments/assets/63da88d6-bfcb-4476-b543-ed12fada568c" />
 
@@ -92,7 +90,7 @@ data-width="<?= $skill['persen']; ?>%"
 
 Animasi progress bar dijalankan menggunakan JavaScript saat halaman di-scroll sehingga bar akan terisi secara bertahap.
 
-## Section Certificates
+# Section Certificates
 
 <img width="3200" height="2000" alt="image" src="https://github.com/user-attachments/assets/e54a6717-fdea-4445-b8f3-5f76cff27ec3" />
 
