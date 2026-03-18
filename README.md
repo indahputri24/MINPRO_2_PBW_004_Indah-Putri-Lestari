@@ -62,7 +62,7 @@ Data kemudian ditampilkan menggunakan perulangan:
 <?php endwhile; ?>
 ```
 
-## Section Skills
+## Section Progress Skills
 
 <img width="3200" height="2000" alt="image" src="https://github.com/user-attachments/assets/a7fc0d89-3191-4589-b377-9248aed1a477" />
 
