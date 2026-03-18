@@ -6,7 +6,7 @@ NIM: 2409116004
 
 Kelas: A
 
-## Section Hero
+# Section Hero
 
 <img width="3200" height="2000" alt="image" src="https://github.com/user-attachments/assets/e7272068-4e7b-4cf4-9b76-f89f945d0022" />
 
@@ -45,8 +45,6 @@ Data deskripsi dan tujuan karier diambil dari tabel `profile` menggunakan PHP:
 ```
 
 ## Section Pengalaman & Aktivitas
-
-<img width="3200" height="2000" alt="image" src="LINK_SCREENSHOT_KAMU" />
 
 Section ini digunakan untuk menampilkan daftar pengalaman dan aktivitas yang pernah diikuti. Data tidak lagi ditulis secara langsung di dalam HTML, melainkan diambil dari database.
 
