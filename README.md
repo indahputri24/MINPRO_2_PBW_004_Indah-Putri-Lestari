@@ -23,8 +23,8 @@ $data = mysqli_fetch_assoc($profile);
 
 Data kemudian ditampilkan menggunakan PHP:
 ```
-<h1><?= $data['nama']; ?></h1>
-<h4><?= $data['nim']; ?></h4>
+<h1 class="fw-bold"><?= $data['nama']; ?></h1>
+<h4 class="fw-bold"><?= $data['nim']; ?></h4>
 ```
 
 # Section About Me
@@ -39,7 +39,7 @@ Data deskripsi dan tujuan karier diambil dari tabel `profile` menggunakan PHP:
 
 ```php
 <p><?= $data['deskripsi']; ?></p>
-<p><?= $data['tujuan']; ?></p>
+<p class="dream-text"><?= $data['tujuan']; ?></p>
 ```
 
 ## Section Pengalaman & Aktivitas
@@ -58,7 +58,10 @@ Data kemudian ditampilkan menggunakan perulangan:
 
 ```
 <?php while($p = mysqli_fetch_assoc($pengalaman)): ?>
-    <li><?= $p['kegiatan']; ?></li>
+    <li>
+        <i class="bi bi-star-fill text-purple me-2"></i>
+        <?= $p['kegiatan']; ?>
+    </li>
 <?php endwhile; ?>
 ```
 
@@ -115,5 +118,5 @@ Data ditampilkan menggunakan perulangan:
 Gambar ditampilkan berdasarkan path yang disimpan di database:
 
 ```
-<img src="<?= $c['image']; ?>">
+<img src="<?= $c['image']; ?>" class="card-img-top">
 ```
