@@ -12,7 +12,7 @@ Kelas: A
 
 Section ini digunakan sebagai bagian pembuka website yang menampilkan identitas utama seperti nama, NIM, dan deskripsi singkat. Struktur dibangun menggunakan elemen `<section id="home">` dan memanfaatkan class Bootstrap seperti `container` dan `text-center` untuk mengatur tata letak agar berada di tengah.
 
-Data profil seperti nama dan NIM tidak ditulis langsung di dalam kode, melainkan diambil dari database menggunakan PHP. Data tersebut disimpan dalam tabel `profile`.
+Data profil seperti nama, NIM, dan bio tidak ditulis langsung di dalam kode, melainkan diambil dari database menggunakan PHP. Data tersebut disimpan dalam tabel `profile`.
 
 Proses pengambilan data dilakukan menggunakan query:
 
@@ -25,6 +25,7 @@ Data kemudian ditampilkan menggunakan PHP:
 ```php
 <h1 class="fw-bold"><?= $data['nama']; ?></h1>
 <h4 class="fw-bold"><?= $data['nim']; ?></h4>
+<p class="lead"><?= $data['bio']; ?></p>
 ```
 
 # Section About Me
@@ -63,6 +64,39 @@ Data kemudian ditampilkan menggunakan perulangan:
         <?= $p['kegiatan']; ?>
     </li>
 <?php endwhile; ?>
+```
+
+## Section Pendidikan
+
+Section ini digunakan untuk menampilkan riwayat pendidikan dalam bentuk daftar terstruktur. Struktur utama dibangun menggunakan elemen `<div class="edu-list">` yang berisi beberapa item pendidikan, serta memanfaatkan Bootstrap Grid System (`col-md-6`) agar tampil berdampingan dengan section lain dan tetap responsif.
+
+Setiap data pendidikan ditampilkan dalam bentuk baris menggunakan class `.edu-item` yang disusun dengan Flexbox (`display: flex`) sehingga ikon dan teks dapat sejajar secara horizontal. Ikon ditampilkan menggunakan Bootstrap Icons, di mana jenis ikon disesuaikan berdasarkan data yang tersimpan di database.
+
+Data pendidikan diambil dari database dan disimpan dalam tabel `pendidikan` yang memiliki atribut `jenjang`, `nama_sekolah`, `tahun`, dan `icon`.
+
+Proses pengambilan data dilakukan menggunakan query:
+
+```php
+$pendidikan = mysqli_query($conn, "SELECT * FROM pendidikan");
+```
+
+Data kemudian ditampilkan menggunakan perulangan:
+```php
+<?php while($edu = mysqli_fetch_assoc($pendidikan)): ?>
+```
+
+Setiap item pendidikan ditampilkan sebagai berikut:
+```php
+<h6><?= $edu['jenjang']; ?></h6>
+<?php if(!empty($edu['nama_sekolah'])): ?>
+    <p><?= $edu['nama_sekolah']; ?></p>
+<?php endif; ?>
+<span><?= $edu['tahun']; ?></span>
+```
+
+Ikon ditampilkan secara dinamis berdasarkan data:
+```php
+<i class="bi <?= $edu['icon']; ?> edu-icon"></i>
 ```
 
 ## Section Progress Skills
