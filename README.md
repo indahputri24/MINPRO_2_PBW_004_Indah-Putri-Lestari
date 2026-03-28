@@ -22,7 +22,7 @@ $data = mysqli_fetch_assoc($profile);
 ```
 
 Data kemudian ditampilkan menggunakan PHP:
-```
+```php
 <h1 class="fw-bold"><?= $data['nama']; ?></h1>
 <h4 class="fw-bold"><?= $data['nim']; ?></h4>
 ```
@@ -56,7 +56,7 @@ $pengalaman = mysqli_query($conn, "SELECT * FROM pengalaman");
 
 Data kemudian ditampilkan menggunakan perulangan:
 
-```
+```php
 <?php while($p = mysqli_fetch_assoc($pengalaman)): ?>
     <li>
         <i class="bi bi-star-fill text-purple me-2"></i>
@@ -81,13 +81,13 @@ $skills = mysqli_query($conn, "SELECT * FROM skills");
 
 Data ditampilkan menggunakan perulangan:
 
-```
+```php
 <?php while($skill = mysqli_fetch_assoc($skills)): ?>
 ```
 
 Nilai persentase digunakan untuk mengatur lebar progress bar melalui atribut `data-width`.
 
-```
+```php
 data-width="<?= $skill['persen']; ?>%"
 ```
 
@@ -111,12 +111,12 @@ $certs = mysqli_query($conn, "SELECT * FROM certificates");
 
 Data ditampilkan menggunakan perulangan:
 
-```
+```php
 <?php while($c = mysqli_fetch_assoc($certs)): ?>
 ```
 
 Gambar ditampilkan berdasarkan path yang disimpan di database:
 
-```
+```php
 <img src="<?= $c['image']; ?>" class="card-img-top">
 ```
